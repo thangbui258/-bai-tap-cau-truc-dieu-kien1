@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doanh so ban hang</title>
+</head>
+<body>
+  <p>Nhập doanh số bán hàng tháng này: <input id="doanh_so" type="text"> tr (vnd)</p>
+  <p><input type="button" value="Tinh" onclick="tinh()"></p>
+  <p id="hh"></p>
+  <script>
+    function tinh() {
+      let hh;
+      let s = +document.getElementById("doanh_so").value;
+
+      if (s < 10) {
+        hh = s / 10 * 0;
+      } else if (s < 25) {
+        hh = s / 10 * 1;
+      } else if (s < 50) {
+        hh = s / 10 * 2;
+      } else {
+        hh = s / 10 * 3;
+      }
+      document.getElementById('hh').innerHTML = "hoa hong nhan duoc la: " + hh + 'tr vnd';
+    }
+
+  </script>
+</body>
+</html>

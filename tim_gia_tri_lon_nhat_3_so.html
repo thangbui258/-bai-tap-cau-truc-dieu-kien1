@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim gia tri lon nhat cua ba so</title>
+</head>
+<body>
+<p>Nhap so thu nhat: <input type="text" id="so1"></p>
+<p>Nhap so thu hai: <input type="text" id="so2"></p>
+<p>Nhap so thu ba: <input type="text" id="so3"></p>
+<p><input onclick="tinh()" type="button" value="SUBMIT"></p>
+<P id="so_sanh">Bam vao submit de hien so lon nhat</P>
+<script>
+    function tinh() {
+        let so1 = +document.getElementById("so1").value;
+        let so2 = +document.getElementById("so2").value;
+        let so3 = +document.getElementById("so3").value;
+
+        let max;
+        if (so1 >= so2) {
+            if (so1 >= so3) {
+                max = so1
+            } else max = so3;
+        } else if (so2 > so3) {
+            max = so2
+        } else max = so3;
+        document.getElementById('so_sanh').innerHTML = "So lon nhat trong 3 so la: " + max;
+    }
+
+
+</script>
+</body>
+</html>
